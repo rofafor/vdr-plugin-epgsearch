@@ -1,0 +1,12 @@
+diff -Nru vdr-2.3.3-vanilla/menu.c vdr-2.3.3-epgsearch/menu.c
+--- vdr-2.3.3-vanilla/menu.c	2017-03-28 23:20:47.294708799 +0300
++++ vdr-2.3.3-epgsearch/menu.c	2017-03-28 23:49:42.137876732 +0300
+@@ -1069,7 +1069,7 @@
+   return false; // convenience return code
+ }
+ 
+-static bool HandleRemoteModifications(cTimer *NewTimer, cTimer *OldTimer = NULL)
++bool HandleRemoteModifications(cTimer *NewTimer, cTimer *OldTimer = NULL)
+ {
+   cStringList Response;
+   if (!OldTimer || OldTimer->Local() || !OldTimer->Id()) {
